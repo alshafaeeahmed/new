@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Volunteer, Elderly
 
+
 # Create your views here.
 
 
@@ -11,11 +12,11 @@ def index(request):
 
 # Create your views here.
 
-"""
+
 def index(response, id):
     ls = Volunteer.objects.get(id=id)
-    return render(response, "main/Volunteer.html", {"ls": ls})
-"""
+    return (response,"main/list.html",{"ls":ls})
+
 
 def home(response):
-    return render(response, "main/home.html", {})
+    return (response,"main/home.html/",{"name":"test"})
