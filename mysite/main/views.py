@@ -7,20 +7,11 @@ from django.contrib.auth.forms import UserCreationForm
 
 # Create your views here.
 
-
-def index(request):
-    return HttpResponse("<h1>Welcome to our site!<h1>")
-
-
 # Create your views here.
 def register(response):
     form = UserCreationForm()
-    return render(response, "main/volunteer.html", {"form":form})
+    return render(response, "main/Volunteer.html")
 
-def index(response, id):
-    ls = Volunteer.objects.get(id=id)
-    return (response,"main/list.html",{"ls":ls})
+def index(response):
+    return render(response,"main/home.html")
 
-
-def home(response):
-    return (response,"main/home.html/",{"name":"test"})

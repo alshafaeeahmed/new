@@ -1,9 +1,16 @@
 {% extends 'main/base.html' %}
-
-{% block title %}
-Home
+<head>
+  <title>Home</title>
+</head>
+<body>
+{% block sidebar %}
+<ul id="nav">
+            <li>{% block nav-home %}<a href=".">Home</a>{% endblock %}</li>
+            <li>{% block nav-about %}<a href="register/">register</a>{% endblock %}</li>
+            <li>{% block nav-contact %}<a href="admin/">admin</a>{% endblock %}</li>
+        </ul>
 {% endblock %}
+{% block content %}<!-- default content text (typically empty) -->{% endblock %}
 
-{% block content %}
-<h1>Home Page</h1>
-{% endblock %}
+</body>
+</html>
