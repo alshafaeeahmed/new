@@ -23,7 +23,7 @@ class Maneger(models.Model):
 
         first_name = models.CharField(max_length=30)
         last_name = models.CharField(max_length=30)
-        mail_adress = models.CharField(max_length=100)
+        mail_adress = models.CharField(max_length=150)
 
 class Review(models.Model):
         rating = models.IntegerField()
