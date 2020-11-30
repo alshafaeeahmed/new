@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path,include
+from django.urls import path, include
 from register import views as vregister
 
 urlpatterns = [
@@ -22,6 +22,6 @@ urlpatterns = [
     path("register/", vregister.register, name="register"),
     # main is the name of the app
     path('', include("main.urls")),
-
+    path('', include("django.contrib.url")),
 
 ]
