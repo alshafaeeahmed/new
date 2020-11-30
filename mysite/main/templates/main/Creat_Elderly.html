@@ -1,32 +1,39 @@
-{% extends "main/base.html" %}
-{% block title %}View Elderly{% endblock %}
 
-{% block content %}
-	<h1>{{ls.name}}</h1>
-	<form method="post" action="#">
-		{% csrf_token %}
-		{% for item in ls.item_set.all %}
-		<div class="input-group mb-3">
-			<div class="input-group-prepend">
-				<div class="input-group-text">
-					{% if item.complete == True %}
-						<input type="checkbox" value="clicked" name="c{{item.id}}" checked>
-					{% else %}
-						<input type="checkbox" value="clicked" name="c{{item.id}}">
-					{% endif %}
-				</div>
-			</div>
-			<input type="text" value="{{item.text}}" class="form-control">
-		</div>
-		{% endfor %}
+<!Doctype Html>
+<Html>
+<Head>
 
-		<div class="input-group mb-3">
-			<div class="input-group-prepend">
-				<button type="submit" name="newItem" value="newItem" class="btn btn-success">Add Item</button>
-			</div>
-			<input type="text" name="new">
-		</div>
+</Head>
+<Body background="https://www.easa.europa.eu/sites/default/files/ifu/covid-19-web_0.jpg">
 
-		<button type="submit" name="save" value="save" class="btn btn-success">Save</button>
-	</form>
-{% endblock %}
+<br>
+</Body>
+</Html>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Hello Elderly</h1>
+
+</body>
+</html>
+
+
+<form action="/action_page.php" method="get" id="form1">
+<label for="fname">First name:</label>
+<input type="text" id="fname" name="fname"><br><br>
+<label for="lname">Last name:</label>
+<input type="text" id="lname" name="lname"><br><br>
+<label for="Pssw">Password:</label>
+<input type="text" id="Pssw" name="Pssw"><br><br>
+<label for="Number">Phone Number:</label>
+<input type="int" id="Number" name="Number"><br><br>
+<label for="birthday">Birthday:</label>
+<input type="date" id="birthday" name="birthday"><br><br>
+<label for="Location">Location:</label>
+<input type="text" id="Location" name="Location"><br><br>
+
+</form>
+
+<button type="Sign up" form="form1" value="Sign up">Sign up</button>

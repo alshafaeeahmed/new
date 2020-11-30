@@ -1,15 +1,42 @@
-{% extends "main/base.html" %}
-{% block title %}View Volunteer{% endblock %}
+<!Doctype Html>
+<Html>
+<Head>
 
-{% block content %}
-	<h1>{{ls.name}}</h1>
-	<ul>
-		{% for item in ls.item_set.all %}
-			{% if item.complete == True %}
-				<li>{{item.text}} - COMPLETE</li>
-			{% else %}
-				<li>{{item.text}} - INCOMPLETE</li>
-			{% endif %}
-		{% endfor %}
-	</ul>
-{% endblock %}
+</Head>
+<Body background="https://www.easa.europa.eu/sites/default/files/ifu/covid-19-web_0.jpg">
+
+<br>
+</Body>
+</Html>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Hello Volunteerl</h1>
+
+</body>
+</html>
+
+
+<form action="/action_page.php" method="get" id="form1">
+<label for="fname">First name:</label>
+<input type="text" id="fname" name="fname"><br><br>
+<label for="lname">Last name:</label>
+<input type="text" id="lname" name="lname"><br><br>
+<label for="Pssw">Password:</label>
+<input type="text" id="Pssw" name="Pssw"><br><br>
+<label for="Number">Phone Number:</label>
+<input type="int" id="Number" name="Number"><br><br>
+<label for="birthday">Birthday:</label>
+<input type="date" id="birthday" name="birthday"><br><br>
+<label for="Location">Location:</label>
+<input type="text" id="Location" name="Location"><br><br>
+
+<button style="display:inline-block">
+  <img src="url" style="float:left;margin-right:0.5em">Add photo
+</button><br><br>
+
+</form>
+
+<button type="submit"><img> Sign Up</button>
